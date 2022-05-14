@@ -48,6 +48,10 @@ class PhotoListViewModel: BaseViewModel{
         getData()
     }
     
+    
+    
+    
+    
     func getData(){
         self.loadMoreRelay.accept(true)
         useCase?.getPhotosList(start: start, limit: limit) {[weak self] (model, error)  in
